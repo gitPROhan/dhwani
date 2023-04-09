@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&family=The+Nautigal&display=swap" rel="stylesheet">
+
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family: tearfont;
+            src: url('demon-sker-font/DemonSker-zyzD.ttf');
+        }
+        body{
+            margin:0px;
+            padding:0px;
+            color:white;
+            background-color: black;
+            font-family:Georgia, 'Times New Roman', Times, serif;
+            width:100%;
+            /* overflow: hidden; */
+
+        }
+        .logo{
+            width:15%;
+            display: inline;
+            margin:0px;
+            padding:0px;
+
+        }
+        
+        .topbox{
+            position:sticky;
+            display:flex;
+            top:0px;
+            background-color: rgba(7, 4, 9, 0.927);
+            z-index: 3;
+            margin-bottom:-20px;
+            border-radius: 10px;
+            
+        }
+        header{
+            font-size: 70px;
+            margin-top: 25px;
+            margin-right: 20px
+        }
+        #logo{
+            margin-left: 3px;
+            margin-top:0px;
+            height:110px;
+            width:110px;
+        }
+        #title{
+            margin-left:-5px;
+            margin-top:21px;
+            height:63px;
+            width:109px;
+        }
+        .navbar{
+            position:relative;
+            left:750px;
+            display:flex;
+            justify-content:space-between;
+            /* align-items: center; */
+            list-style:none;
+        }
+        .navbar li{
+            display:inline block;
+        }
+        .navbar li a{
+            text-decoration: none;
+            color:rgb(61, 154, 136);
+        }
+        .navitem{
+            margin:20px 35px;
+            padding:12px 12px;
+            font-size: 18px;
+            font-family:'Exo 2', sans-serif;
+            /* background-color: black; */
+            /* opacity: 0.7; */
+        }
+        .navitem:hover{
+            filter:brightness(140%);
+            border-bottom:2px solid pink;
+            margin-bottom:18px;
+            border-radius: 2px;
+        } 
+        .navitem:hover a{
+            color:rgba(228, 177, 129, 0.976); 
+        }  
+        .page{
+            z-index: 1;
+            background-image:url(badshah/dreamkidback.png);
+            position:relative;
+            background-size:cover;
+            font-family:Georgia, 'Times New Roman', Times, serif;
+            width:100%;
+            height:100vh;
+        }
+        .page::before{
+            content:"";
+            position:absolute;
+            top:0px;
+            left:0px;
+            display:flex;
+            flex-direction: row;
+            width:100%;
+            height:100vh;
+            backdrop-filter:blur(14px) brightness(35%);
+            /* z-index: -1;             */
+            
+
+        }
+        .songbox{
+            width: 550px;
+            /* height:500px; */
+            background-color: rgba(250, 254, 255, 0);
+            display:flex;
+            flex-direction: column;
+            position: absolute;
+            top:150px;
+            right:150px;
+            border-left:2px solid rgba(84, 83, 83, 0.734);
+            /* filter:blur(-25px); */ 
+        }
+        .song{
+            display:flex;
+            width:550px;
+            /* width:50%; */
+            background-color: rgba(106, 100, 100, 0.885);
+            margin:10px 10px;
+            border-radius: 8px;
+            box-shadow: 3px 3px 15px rgba(11, 10, 10, 0.364);
+        }
+        .song:hover{
+            box-shadow: 3px 3px 20px rgb(251, 152, 3);
+        }
+        .song:hover .songtitle .songname{
+            color:rgb(239, 194, 122);
+        }
+        .song:hover img{
+            filter: brightness(140%);
+        }
+        .songbox .song img{
+            width:100px;
+            height:100px;
+            margin:8px 8px;
+        }
+        .songbox .song .songname{
+            font-size: 30px;
+            color:black;
+            margin:16px 7px;
+        }
+        .albumtitle{
+            position:absolute;
+            top:200px;
+            left:90px;
+            font-size: 115px;
+            font-family: 'Righteous', cursive;
+            text-shadow:3px 3px 20px rgb(46, 45, 42);
+            color:rgb(205, 201, 212);
+        }
+        .albumtitle p{
+            margin:25px 0px;
+        }
+        .albumtitle #sectitle{
+            position:relative;
+            left:265px;
+            font-size: 60px;
+            margin-left:30px;
+            color:rgb(163, 160, 168);
+        }
+        .songbox .song .time{
+            font-size:20px;
+            color:rgb(37, 39, 39);
+            margin:16px 7px;
+        }
+        .footer{
+            display:flex;
+            flex-direction: row;
+            justify-content: center;
+            width:100%;
+            height:200px;
+            background-color: black;
+        }
+        .footer .f{
+            margin:15px 80px;
+        }
+        .footer .f .f1{
+            font-weight: bold;
+        }
+        .footer .line{
+            margin-top: 30px;
+            border:0.5px solid rgba(220, 208, 208, 0.609);
+            height:30px;
+        }
+        .footer a{
+            text-decoration: none;
+            color:white;
+        }
+        .footer img{
+            height:40px;
+            width:40px;
+            margin:5px 10px;
+            margin-right: 20px;
+            background-color: white;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="topbox">
+        <img id="logo" src="backgrounds and logo/dlogo.png" alt="#">
+        <img id="title" src="backgrounds and logo/title.png" alt="">
+        <ul class="navbar"> 
+            <li class="navitem" id="active"><a href="index.html">HOME</a></li>
+            <li class="navitem"><a href="about.html"> ABOUT US</a></li>
+            <li class="navitem"><a href="Artists.html"> ARTISTS</a></li>
+        </ul>
+    </div>
+    <div class="page">
+        <div class="albumtitle">
+            <p>THE POWER OF<br>DREAMS OF A KID</p>
+            <p id="sectitle">ALBUM BY BADSHAH</p>
+        </div>
+        <div class="songbox">
+            <div class="song">
+                <img src="badshah/dreamkid/powerdreamsong.jpeg" alt="">
+                <div class="songtitle">
+                    <p class="songname">Power of Dreams</p>
+                    <p class="time">3:09</p>
+                </div>
+            </div>
+            <div class="song">
+                <img src="badshah/dreamkid/cloutsong.jpeg" alt="">
+                <div class="songtitle">
+                    <p class="songname">Clout</p>
+                    <p class="time">3:09</p>
+                </div>
+            </div>
+            <div class="song">
+                <img src="badshah/dreamkid/hotloundesong.jpeg" alt="">
+                <div class="songtitle">
+                    <p class="songname">Hot launde</p>
+                    <p class="time">3:09</p>
+                </div>
+            </div>
+            <div class="song">
+                <img src="badshah/dreamkid/shurusong.jpg" alt="">
+                <div class="songtitle">
+                    <p class="songname">Shuru</p>
+                    <p class="time">3:09</p>
+                </div>
+            </div>
+            <div class="song">
+                <img src="badshah/dreamkid/bklsong.jpeg" alt="">
+                <div class="songtitle">
+                    <p class="songname">BKL</p>
+                    <p class="time">3:09</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+         <div class="f">
+            <p class="f1">Company</p>
+            <p><a href="about.html">About us</a></p>
+         </div>
+         <div class="line"></div>
+         <div class="f">
+            <p class="f1">Communities</p>
+            <p>For artists</p>
+            <p>For listeners</p>
+         </div>
+         <div class="line"></div>
+         <div class="f">
+            <p class="f1">Social Media</p>
+            <img src="backgrounds and logo/facebookicon.png" alt="">
+            <img src="backgrounds and logo/instaicon.png" alt="">
+            <img src="backgrounds and logo/twittericon.png" alt="">
+         </div>
+         <div class="line"></div>
+         <div class="f">
+            <p class="f1">
+                Copyrights
+            </p>
+            <p>&copy; 2023 Dhvanimusic.com</p>
+            <p>&nbsp;&nbsp;All rights reserved.</p>
+         </div>
+    </div>
+</body>
+</html>
