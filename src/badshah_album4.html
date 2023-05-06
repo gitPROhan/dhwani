@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,211 +16,251 @@
             font-family: tearfont;
             src: url('demon-sker-font/DemonSker-zyzD.ttf');
         }
-        body{
-            margin:0px;
-            padding:0px;
-            color:white;
+
+        body {
+            margin: 0px;
+            padding: 0px;
+            color: white;
             background-color: black;
-            font-family:Georgia, 'Times New Roman', Times, serif;
-            width:100%;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            width: 100%;
             /* overflow: hidden; */
 
         }
-        .logo{
-            width:15%;
+
+        .logo {
+            width: 15%;
             display: inline;
-            margin:0px;
-            padding:0px;
+            margin: 0px;
+            padding: 0px;
 
         }
-        
-        .topbox{
-            position:sticky;
-            display:flex;
-            top:0px;
+
+        .topbox {
+            position: sticky;
+            display: flex;
+            top: 0px;
             background-color: rgba(7, 4, 9, 0.927);
             z-index: 3;
-            margin-bottom:-20px;
+            margin-bottom: -20px;
             border-radius: 10px;
-            
+
         }
-        header{
+
+        header {
             font-size: 70px;
             margin-top: 25px;
             margin-right: 20px
         }
-        #logo{
+
+        #logo {
             margin-left: 3px;
-            margin-top:0px;
-            height:110px;
-            width:110px;
+            margin-top: 0px;
+            height: 110px;
+            width: 110px;
         }
-        #title{
-            margin-left:-5px;
-            margin-top:21px;
-            height:63px;
-            width:109px;
+
+        #title {
+            margin-left: -5px;
+            margin-top: 21px;
+            height: 63px;
+            width: 109px;
         }
-        .navbar{
-            position:relative;
-            left:750px;
-            display:flex;
-            justify-content:space-between;
+
+        .navbar {
+            position: relative;
+            left: 660px;
+            display: flex;
+            justify-content: space-between;
             /* align-items: center; */
-            list-style:none;
+            list-style: none;
         }
-        .navbar li{
-            display:inline block;
+
+        .navbar li {
+            display: inline block;
         }
-        .navbar li a{
+
+        .navbar li a {
             text-decoration: none;
-            color:rgb(61, 154, 136);
+            color: rgb(61, 154, 136);
         }
-        .navitem{
-            margin:20px 35px;
-            padding:12px 12px;
+
+        .navitem {
+            margin: 20px 22px;
+            padding: 12px 12px;
             font-size: 18px;
-            font-family:'Exo 2', sans-serif;
+            font-family: 'Exo 2', sans-serif;
             /* background-color: black; */
             /* opacity: 0.7; */
         }
-        .navitem:hover{
-            filter:brightness(140%);
-            border-bottom:2px solid pink;
-            margin-bottom:18px;
-            border-radius: 2px;
-        } 
-        .navitem:hover a{
-            color:rgba(228, 177, 129, 0.976); 
-        }  
-        .page{
+
+        .page {
             z-index: 1;
-            background-image:url(badshah/retropanda_badshah.jpeg);
-            position:relative;
-            background-size:cover;
-            font-family:Georgia, 'Times New Roman', Times, serif;
-            width:100%;
-            height:100vh;
+            background-image: url(badshah/retropanda_badshah.jpeg);
+            position: relative;
+            background-size: cover;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            width: 100%;
+            height: 100vh;
         }
-        .page::before{
-            content:"";
-            position:absolute;
-            top:0px;
-            left:0px;
-            display:flex;
+
+        .page::before {
+            content: "";
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            display: flex;
             flex-direction: row;
-            width:100%;
-            height:100vh;
-            backdrop-filter:blur(14px) brightness(35%);
+            width: 100%;
+            height: 100vh;
+            backdrop-filter: blur(14px) brightness(35%);
             /* z-index: -1;             */
-            
+
 
         }
-        .songbox{
+
+        .songbox {
             width: 550px;
             /* height:500px; */
             background-color: rgba(250, 254, 255, 0);
-            display:flex;
+            display: flex;
             flex-direction: column;
             position: absolute;
-            top:150px;
-            right:150px;
-            border-left:2px solid rgba(84, 83, 83, 0.734);
-            /* filter:blur(-25px); */ 
+            top: 150px;
+            right: 150px;
+            border-left: 2px solid rgba(84, 83, 83, 0.734);
+            /* filter:blur(-25px); */
         }
-        .song{
-            display:flex;
-            width:550px;
+
+        .song {
+            display: flex;
+            width: 550px;
             /* width:50%; */
             background-color: rgba(106, 100, 100, 0.885);
-            margin:10px 10px;
+            margin: 10px 10px;
             border-radius: 8px;
             box-shadow: 3px 3px 15px rgba(11, 10, 10, 0.364);
         }
-        .song:hover{
+
+        .song:hover {
             box-shadow: 3px 3px 20px rgb(251, 152, 3);
         }
-        .song:hover .songtitle .songname{
-            color:rgb(239, 194, 122);
+
+        .song:hover .songtitle .songname {
+            color: rgb(239, 194, 122);
         }
-        .song:hover img{
+
+        .song:hover img {
             filter: brightness(140%);
         }
-        .songbox .song img{
-            width:100px;
-            height:100px;
-            margin:8px 8px;
+
+        .songbox .song img {
+            width: 100px;
+            height: 100px;
+            margin: 8px 8px;
         }
-        .songbox .song .songname{
+
+        .songbox .song .songname {
             font-size: 30px;
-            color:black;
-            margin:16px 7px;
+            color: black;
+            margin: 16px 7px;
         }
-        .albumtitle{
-            position:absolute;
-            top:200px;
-            left:90px;
+
+        .albumtitle {
+            position: absolute;
+            top: 200px;
+            left: 90px;
             font-size: 115px;
             font-family: 'Righteous', cursive;
-            text-shadow:3px 3px 20px rgb(46, 45, 42);
-            color:rgb(205, 201, 212);
+            text-shadow: 3px 3px 20px rgb(46, 45, 42);
+            color: rgb(205, 201, 212);
         }
-        .albumtitle p{
-            margin:25px 0px;
+
+        .albumtitle p {
+            margin: 25px 0px;
         }
-        .albumtitle #sectitle{
-            position:relative;
-            left:265px;
+
+        .albumtitle #sectitle {
+            position: relative;
+            left: 265px;
             font-size: 60px;
-            margin-left:30px;
-            color:rgb(163, 160, 168);
+            margin-left: 30px;
+            color: rgb(163, 160, 168);
         }
-        .songbox .song .time{
-            font-size:20px;
-            color:rgb(37, 39, 39);
-            margin:16px 7px;
+
+        .songbox .song .time {
+            font-size: 20px;
+            color: rgb(37, 39, 39);
+            margin: 16px 7px;
         }
-        .footer{
-            display:flex;
+
+        .playbut {
+            margin-left: 20px;
+            height: 42px;
+            width: 130px;
+            font-size: 16px;
+            border-radius: 10px;
+            color: white;
+            font-family: 'Exo 2', sans-serif;
+            background-color: black;
+            cursor: pointer;
+        }
+
+        .playbut:hover {
+            background-color: rgb(225, 178, 95);
+            color: black;
+        }
+
+        .footer {
+            display: flex;
             flex-direction: row;
             justify-content: center;
-            width:100%;
-            height:200px;
+            width: 100%;
+            height: 200px;
             background-color: black;
         }
-        .footer .f{
-            margin:15px 80px;
+
+        .footer .f {
+            margin: 15px 80px;
         }
-        .footer .f .f1{
+
+        .footer .f .f1 {
             font-weight: bold;
         }
-        .footer .line{
+
+        .footer .line {
             margin-top: 30px;
-            border:0.5px solid rgba(220, 208, 208, 0.609);
-            height:30px;
+            border: 0.5px solid rgba(220, 208, 208, 0.609);
+            height: 30px;
         }
-        .footer a{
+
+        .footer a {
             text-decoration: none;
-            color:white;
+            color: white;
         }
-        .footer img{
-            height:40px;
-            width:40px;
-            margin:5px 10px;
+
+        .footer img {
+            height: 40px;
+            width: 40px;
+            margin: 5px 10px;
             margin-right: 20px;
             background-color: white;
             border-radius: 8px;
         }
     </style>
 </head>
+
 <body>
     <div class="topbox">
         <img id="logo" src="backgrounds and logo/dlogo.png" alt="#">
         <img id="title" src="backgrounds and logo/title.png" alt="">
-        <ul class="navbar"> 
-            <li class="navitem" id="active"><a href="index.html">HOME</a></li>
-            <li class="navitem"><a href="about.html"> ABOUT US</a></li>
-            <li class="navitem"><a href="Artists.html"> ARTISTS</a></li>
+        <ul class="navbar">
+            <li class="navitem"><a href="index.html">HOME</a></li>
+            <li class="navitem"><a href="about.html">ABOUT US</a></li>
+            <li class="navitem"><a href="Artists.html">ARTISTS</a></li>
+            <li class="navitem"><a href="search.html">SEARCH</a></li>
+            <li class="navitem"><a href="spotlight.html">SPOTLIGHT</a></li>
+            <li class="navitem"><a href="playlist.html">PLAYLIST</a></li>
         </ul>
     </div>
     <div class="page">
@@ -231,66 +272,95 @@
             <div class="song">
                 <img src="badshah/jugnu.jpg" alt="">
                 <div class="songtitle">
-                    <p class="songname">Jugnu</p>
+                    <p class="songname">Jugnu<button class="playbut">Add to playlist</button></p>
                     <p class="time">3:51</p>
                 </div>
             </div>
             <div class="song">
                 <img src="badshah/hosh.jpg" alt="">
                 <div class="songtitle">
-                    <p class="songname">Hosh</p>
+                    <p class="songname">Hosh<button class="playbut">Add to playlist</button></p>
                     <p class="time">4:00</p>
                 </div>
             </div>
             <div class="song">
                 <img src="badshah/tabahi.jpg" alt="">
                 <div class="songtitle">
-                    <p class="songname">Tabahi</p>
+                    <p class="songname">Tabahi<button class="playbut">Add to playlist</button></p>
                     <p class="time">2:49</p>
                 </div>
             </div>
             <div class="song">
                 <img src="badshah/chamkeelachehra.jpg" alt="">
                 <div class="songtitle">
-                    <p class="songname">Chamkeela Chehra</p>
+                    <p class="songname">Chamkeela Chehra<button class="playbut">Add to playlist</button></p>
                     <p class="time">3:00</p>
                 </div>
             </div>
             <div class="song">
                 <img src="badshah/gendaphool.jpg" alt="">
                 <div class="songtitle">
-                    <p class="songname">Genda Phool</p>
+                    <p class="songname">Genda Phool<button class="playbut">Add to playlist</button></p>
                     <p class="time">2:54</p>
                 </div>
             </div>
         </div>
     </div>
     <div class="footer">
-         <div class="f">
+        <div class="f">
             <p class="f1">Company</p>
             <p><a href="about.html">About us</a></p>
-         </div>
-         <div class="line"></div>
-         <div class="f">
+        </div>
+        <div class="line"></div>
+        <div class="f">
             <p class="f1">Communities</p>
             <p>For artists</p>
             <p>For listeners</p>
-         </div>
-         <div class="line"></div>
-         <div class="f">
+        </div>
+        <div class="line"></div>
+        <div class="f">
             <p class="f1">Social Media</p>
             <img src="backgrounds and logo/facebookicon.png" alt="">
             <img src="backgrounds and logo/instaicon.png" alt="">
             <img src="backgrounds and logo/twittericon.png" alt="">
-         </div>
-         <div class="line"></div>
-         <div class="f">
+        </div>
+        <div class="line"></div>
+        <div class="f">
             <p class="f1">
                 Copyrights
             </p>
             <p>&copy; 2023 Dhvanimusic.com</p>
             <p>&nbsp;&nbsp;All rights reserved.</p>
-         </div>
+        </div>
     </div>
 </body>
+<script>
+    let nav = document.querySelectorAll('.navitem');
+
+    for (let i = 0; i < nav.length; i++) {
+        if (nav[i].id == "active") {
+            nav[i].style.borderBottom = '2px solid rgba(233, 169, 97, 0.976)';
+            nav[i].getElementsByTagName('a')[0].style.color = 'rgba(233, 169, 97, 0.976)';
+            nav[i].style.marginBottom = '18px';
+            nav[i].style.borderRadius = '2px';
+            nav[i].style.filter = 'brightness(180%)';
+            continue;
+        }
+        nav[i].addEventListener('mouseover', function () {
+            nav[i].style.borderBottom = '2px solid rgba(233, 169, 97, 0.976)';
+            nav[i].getElementsByTagName('a')[0].style.color = 'rgba(233, 169, 97, 0.976)';
+            nav[i].style.marginBottom = '18px';
+            nav[i].style.borderRadius = '2px';
+            nav[i].style.filter = 'brightness(180%)';
+        })
+        nav[i].addEventListener('mouseout', function () {
+            nav[i].style.borderBottom = 'None';
+            nav[i].getElementsByTagName('a')[0].style.color = 'rgb(79, 194, 171)';
+            nav[i].style.marginBottom = '20px';
+            nav[i].style.borderRadius = '0px';
+            nav[i].style.filter = 'brightness(100%)';
+        })
+    }
+</script>
+
 </html>

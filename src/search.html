@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Domine&family=Maven+Pro:wght@500&family=Righteous&family=Signika+Negative&family=The+Nautigal&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family: tearfont;
+            src: url('demon-sker-font/DemonSker-zyzD.ttf');
+        }
+
+        body {
+            margin: 0px;
+            padding: 0px;
+            color: white;
+            background-image: url(backgrounds\ and\ logo/back32.jpeg);
+            backdrop-filter: blur(5px);
+            background-size: cover;
+            height: 100vh;
+            font-family: 'Domine', serif;
+            width: 100%;
+
+        }
+
+        .logo {
+            width: 15%;
+            display: inline;
+            margin: 0px;
+            padding: 0px;
+
+        }
+
+        .topbox {
+            position: sticky;
+            display: flex;
+            top: 0px;
+            background-color: rgba(11, 0, 13, 0.703);
+            z-index: 3;
+            margin-bottom: -20px;
+
+        }
+
+        .topbox #logo {
+            filter: drop-shadow(2px 2px 3px rgb(0, 208, 255));
+            border-radius: 25px;
+            animation-name: starter;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+        }
+
+        @keyframes starter {
+            0% {
+                filter: drop-shadow(2px 2px 9px orange);
+                transform: rotate(360deg);
+            }
+
+            20% {
+                filter: drop-shadow(2px 2px 9px rgb(51, 255, 0));
+                transform: rotate(-360deg);
+            }
+
+            40% {
+                filter: drop-shadow(2px 2px 9px rgb(207, 97, 95));
+                transform: rotate(360deg);
+            }
+
+            50% {
+                transform: rotate(0deg);
+            }
+
+            75% {
+                filter: drop-shadow(2px 2px 9px rgb(149, 0, 255));
+            }
+
+            100% {
+                filter: drop-shadow(2px 2px 9px rgb(0, 213, 255));
+            }
+
+        }
+
+        .topbox #title {
+            filter: drop-shadow(2px 2px 3px rgb(0, 208, 255));
+            animation-name: starter1;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+        }
+
+        @keyframes starter1 {
+            0% {
+                filter: drop-shadow(2px 2px 9px orange);
+                transform: translateX(0px);
+            }
+
+            20% {
+                filter: drop-shadow(2px 2px 9px rgb(51, 255, 0));
+                transform: translateX(40px);
+            }
+
+            40% {
+                filter: drop-shadow(2px 2px 9px rgb(207, 97, 95));
+                transform: translateX(0px);
+
+            }
+
+            75% {
+                filter: drop-shadow(2px 2px 9px rgb(149, 0, 255));
+            }
+
+            100% {
+                filter: drop-shadow(2px 2px 9px rgb(0, 213, 255));
+            }
+
+        }
+
+        header {
+            font-size: 70px;
+            margin-top: 25px;
+            margin-right: 20px
+        }
+
+        #logo {
+            margin-left: 3px;
+            margin-top: 0px;
+            height: 110px;
+            width: 110px;
+        }
+
+        #title {
+            margin-left: -5px;
+            margin-top: 21px;
+            height: 63px;
+            width: 109px;
+        }
+
+        .navbar {
+            position: relative;
+            left: 750px;
+            display: flex;
+            justify-content: space-between;
+            list-style: none;
+        }
+
+        .navbar li {
+            display: inline block;
+        }
+
+        .navbar li a {
+            text-decoration: none;
+            color: rgb(79, 194, 171);
+        }
+
+        .navitem {
+            margin: 20px 22px;
+            padding: 12px 12px;
+            font-size: 18px;
+            font-family: 'Exo 2', sans-serif;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 30px;
+            padding: 5px;
+        }
+
+        .mainbox {
+            display: flex;
+        }
+
+        .content .searchbox {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 50px;
+            background-color: rgba(0, 0, 0, 0.319);
+            border-radius: 10px;
+            box-shadow: 3px 3px 25px rgba(128, 128, 128, 0.353);
+        }
+
+        .content .searchbox #searchbar {
+            height: 50px;
+            width: 500px;
+            border-radius: 25px;
+            text-align: center;
+            font-size: 19px;
+            color: rgba(237, 199, 155, 0.976);
+            background-color: rgba(253, 253, 253, 0.114);
+        }
+
+        .content .searchbox #submit {
+            height: 50px;
+            width: 150px;
+            border-radius: 25px;
+            text-align: center;
+            font-size: 19px;
+            margin-top: 30px;
+            cursor: pointer;
+            color: rgba(29, 30, 30, 0.976);
+            background-color: rgba(17, 200, 237, 0.876);
+        }
+
+        .content .searchbox #submit:hover {
+            filter: brightness(70%);
+        }
+
+        .filterbox {
+            display: flex;
+            flex-direction: column;
+            /* height:180px;
+
+            width:200px; */
+            position: relative;
+            margin-right: 100px;
+            background-color: rgba(1, 0, 5, 0.499);
+            padding: 10px 30px;
+            border-radius: 9px;
+            box-shadow: 3px 3px 25px rgba(128, 128, 128, 0.353);
+        }
+
+        .filterbox h4 {
+            font-size: 20px;
+            margin: 5px 0px;
+            margin-top: 10px;
+        }
+
+        .filterbox .input {
+            display: flex;
+            font-size: 16px;
+
+        }
+
+        .filterbox .input input {
+            height: 24px;
+            width: 120px;
+            margin: 10px;
+            color: aliceblue;
+            background-color: rgba(9, 126, 128, 0.265);
+            padding: 0px 13px;
+            margin-right: 10px;
+            border-radius: 12px;
+        }
+
+        .filterbox button {
+            width: 120px;
+            height: 26px;
+            margin-bottom: 10px;
+            border-radius: 13px;
+            cursor: pointer;
+            background-color: rgb(10, 192, 220);
+        }
+
+        .filterbox label {
+            margin: 0px 0px;
+        }
+
+        .filterbox label input[type="radio"] {
+            margin: 0px 20px;
+            height: 20px;
+            width: 20px;
+        }
+
+        .s-res {
+            display: flex;
+            /* flex-direction: row; */
+            font-family: 'Exo 2', sans-serif;
+            align-items: center;
+            border-radius: 8px;
+            padding: 20px;
+            background-color: rgb(162 148 148 / 34%);
+            margin: 30px 0px;
+
+        }
+
+        .s-res:hover {
+            box-shadow: 3px 3px 20px rgb(234, 193, 90);
+        }
+
+        .s-res:hover img {
+            filter: brightness(120%);
+        }
+
+        .s-res:hover p {
+            color: rgb(239, 194, 122);
+        }
+
+        .s-res:hover button {
+            background-color: rgb(239, 194, 122);
+        }
+
+        .s-res:hover .tshow {
+            box-shadow: 1px 1px 5px rgb(239, 194, 122);
+        }
+
+        .s-res img {
+            position: relative;
+            height: 223px;
+            width: 223px;
+            margin-right: 40px;
+            border-radius: 8px;
+        }
+
+        .s-res p {
+            color: #ecd7d7de;
+            font-size: 20px;
+            margin-right: 80px;
+            line-height: 29px;
+        }
+
+        .s-res button {
+            margin: 14px 22px;
+            font-size: 16px;
+            height: 40px;
+            width: 100px;
+            border-radius: 9px;
+            background-color: rgb(23, 219, 219);
+        }
+
+        .s-res button:hover {
+            filter: brightness(70%);
+            cursor: pointer;
+            box-shadow: 2px 2px 14px rgba(13, 211, 225, 0.886);
+        }
+
+        .line {
+            background-color: grey;
+            margin: 10px 3px;
+            height: 1px;
+        }
+
+        .tshow {
+            margin: 2px 5px;
+            font-size: 18px;
+            padding: 5px 5px;
+            border-radius: 10px;
+            box-shadow: 1px 1px 5px rgb(17, 199, 236);
+            font-weight: bold;
+            color: rgb(151, 156, 157);
+            background-color: rgba(6, 6, 6, 0.761);
+        }
+
+        .footer {
+            position: relative;
+            bottom: -205px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            padding-top: 60px;
+            width: 100%;
+            height: 200px;
+            padding-bottom: 100px;
+            background-color: black;
+        }
+
+        .footer .f {
+            margin: 15px 80px;
+        }
+
+        .footer .f .f1 {
+            font-weight: bold;
+        }
+
+        .footer .line {
+            margin-top: 30px;
+            border: 0.5px solid rgba(220, 208, 208, 0.609);
+            height: 30px;
+        }
+
+        .footer a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .footer img {
+            height: 40px;
+            width: 40px;
+            margin: 5px 10px;
+            margin-right: 20px;
+            background-color: white;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="topbox">
+        <img id="logo" src="backgrounds and logo/dlogo.png" alt="#">
+        <img id="title" src="backgrounds and logo/title.png" alt="">
+        <ul class="navbar">
+            <li class="navitem"><a href="index.html">HOME</a></li>
+            <li class="navitem"><a href="about.html">ABOUT US</a></li>
+            <li class="navitem"><a href="Artists.html">ARTISTS</a></li>
+            <li class="navitem" id="active"><a href="search.html">SEARCH</a></li>
+            <li class="navitem"><a href="spotlight.html">SPOTLIGHT</a></li>
+        </ul>
+    </div>
+    <div class="content">
+        <div class="mainbox">
+            <div class="filterbox">
+                <h4>Filter</h4>
+                <div class="input">
+                    <p>Duration:</p>
+                    <input type="number" id="time" placeholder="(in seconds)">
+                </div>
+                <button id="sub" class="subt">Submit</button>
+                <div class="line"></div>
+                <label for="html">Explicit<input type="radio" id="exp" name="expcheck"></label><br>
+                <label for="html">Non-Explicit<input type="radio" id="non-exp" name="expcheck"></label><br>
+                <button id="rmfilter">Remove All</button>
+
+            </div>
+            <div class="searchbox">
+                <input type="text" placeholder="Search" id="searchbar">
+                <button id="submit">Search</button>
+            </div>
+        </div>
+        <div id="searchcon">
+
+        </div>
+    </div>
+
+
+    <div class="footer">
+        <div class="f">
+            <p class="f1">Company</p>
+            <p><a href="about.html">About us</a></p>
+        </div>
+        <div class="line"></div>
+        <div class="f">
+            <p class="f1">Communities</p>
+            <p>For artists</p>
+            <p>For listeners</p>
+        </div>
+        <div class="line"></div>
+        <div class="f">
+            <p class="f1">Social Media</p>
+            <img src="backgrounds and logo/facebookicon.png" alt="">
+            <img src="backgrounds and logo/instaicon.png" alt="">
+            <img src="backgrounds and logo/twittericon.png" alt="">
+        </div>
+        <div class="line"></div>
+        <div class="f">
+            <p class="f1">
+                Copyrights
+            </p>
+            <p>&copy; 2023 Dhvanimusic.com</p>
+            <p>&nbsp;&nbsp;All rights reserved.</p>
+        </div>
+    </div>
+    <script src="typing_effect.js"></script>
+</body>
+<script>
+    let nav = document.querySelectorAll('.navitem');
+
+    for (let i = 0; i < nav.length; i++) {
+        if (nav[i].id == "active") {
+            nav[i].style.borderBottom = '2px solid rgba(233, 169, 97, 0.976)';
+            nav[i].getElementsByTagName('a')[0].style.color = 'rgba(233, 169, 97, 0.976)';
+            nav[i].style.marginBottom = '18px';
+            nav[i].style.borderRadius = '2px';
+            nav[i].style.filter = 'brightness(180%)';
+            continue;
+        }
+        nav[i].addEventListener('mouseover', function () {
+            nav[i].style.borderBottom = '2px solid rgba(233, 169, 97, 0.976)';
+            nav[i].getElementsByTagName('a')[0].style.color = 'rgba(233, 169, 97, 0.976)';
+            nav[i].style.marginBottom = '18px';
+            nav[i].style.borderRadius = '2px';
+            nav[i].style.filter = 'brightness(180%)';
+        })
+        nav[i].addEventListener('mouseout', function () {
+            nav[i].style.borderBottom = 'None';
+            nav[i].getElementsByTagName('a')[0].style.color = 'rgb(79, 194, 171)';
+            nav[i].style.marginBottom = '20px';
+            nav[i].style.borderRadius = '0px';
+            nav[i].style.filter = 'brightness(100%)';
+        })
+    }
+
+    duration = []
+    explitnes = []
+    parenttem = []
+    links = []
+    function printdata(s) {
+        str = s;
+        newstr = str.replace(/ /g, '+');
+        console.log(newstr)
+        let parent = document.getElementById('searchcon')
+        fetch(`https://itunes.apple.com/search?term=${newstr}&entity=musicTrack&limit=10`)
+            .then((response) => response.json())
+            .then((data) => {
+                parent.innerHTML = ''
+                for (let i = 0; i < data.resultCount; i++) {
+                    let img = new Image();
+                    parenttem[i] = document.createElement('div');
+                    parenttem[i].className = 's-res';
+                    let child = document.createElement('p');
+                    child.innerHTML = 'Artist Name : ';
+                    child.innerHTML += data.results[i].artistName;
+                    child.innerHTML += '<br>';
+                    child.innerHTML += 'Track Name : ';
+                    child.innerHTML += data.results[i].trackName;
+                    child.innerHTML += '<br>'
+                    var d = parseInt(data.results[i].trackTimeMillis);
+                    d = Math.trunc(d / 1000);
+                    child.innerHTML += 'Durationn : '
+                    if (d % 60 < 10) {
+                        child.innerHTML += `${Math.trunc(d / 60)}:0${d % 60}`
+                    }
+                    else {
+                        child.innerHTML += `${Math.trunc(d / 60)}:${d % 60}`;
+                    }
+                    child.innerHTML += '<br>'
+                    child.innerHTML += `<button class="play" id="but${i}" value="${data.results[i].previewUrl}">Play</button>`;
+                    child.innerHTML += '<br>'
+                    child.innerHTML += `<span id="aud-but${i}"class="tshow">00:00</span>`
+                    child.innerHTML += `<span class="tline"></span>`
+                    child.innerHTML += `<span class="tshow" id="dur-but${i}">00:00</span>`
+                    duration[i] = d;
+                    links[i] = data.results[i].previewUrl;
+                    if (data.results[i].trackExplicitness == "notExplicit") {
+                        explitnes[i] = 0;
+                    }
+                    else {
+                        explitnes[i] = 1;
+                    }
+                    img.src = data.results[i].artworkUrl100;
+                    img.onload = function () {
+                        parenttem[i].appendChild(img);
+                        parenttem[i].appendChild(child);
+                    }
+                    parent.appendChild(parenttem[i]);
+                }
+            });
+    }
+
+    sub = document.getElementById('submit')
+    let s;
+    sub.addEventListener('click', function () {
+        s = document.getElementById('searchbar').value
+        printdata(s);
+    });
+
+    but = document.getElementById('sub')
+    but.addEventListener('click', function () {
+        parent = document.getElementById('searchcon')
+        for (let i = duration.length - 1; i >= 0; i--) {
+            if (duration[i] < document.getElementById('time').value) {
+                parent.removeChild(parenttem[i]);
+                parenttem.splice(i, 1);
+                duration.splice(i, 1)
+                explitnes.splice(i, 1)
+                links.splice(i, 1)
+            }
+        }
+    });
+
+    radio1 = document.getElementById('exp')
+    radio2 = document.getElementById('non-exp')
+    radio1.addEventListener('change', function () {
+        filterexlicit();
+    });
+    radio2.addEventListener('change', function () {
+        filterexlicit();
+    });
+
+    function filterexlicit() {
+        parent = document.getElementById('searchcon')
+        let check = 1;
+        if (document.getElementById('exp').checked == true) {
+            check = 0;
+        }
+        for (let i = explitnes.length - 1; i >= 0; i--) {
+            if (explitnes[i] == check) {
+                parent.removeChild(parenttem[i]);
+                parenttem.splice(i, 1);
+                duration.splice(i, 1)
+                explitnes.splice(i, 1)
+                links.splice(i, 1)
+            }
+        }
+    }
+    let rmfilter = document.getElementById("rmfilter");
+    rmfilter.addEventListener('click', function () {
+        printdata(s);
+        document.getElementById('exp').checked = false;
+        document.getElementById('non-exp').checked = false;
+        document.getElementById('time').value = "";
+    })
+    let aud = document.createElement('audio');
+    let prevButton = null;
+
+    parent.addEventListener('click', function (event) {
+        if (event.target && event.target.className == 'play') {
+            let audioTime = document.getElementById(`aud-${event.target.id}`);
+            let audioDuration = document.getElementById(`dur-${event.target.id}`);
+            aud.src = event.target.value;
+            if (prevButton !== null && prevButton !== event.target) {
+                prevButton.innerHTML = 'Play';
+            }
+            prevButton = event.target;
+
+            if (event.target.innerHTML == 'Play') {
+                aud.play();
+                event.target.innerHTML = 'Pause';
+                event.target.style.backgroundColor = 'rgb(237, 204, 113)';
+                console.log(aud);
+            }
+            else {
+                aud.pause();
+                audioTime.innerText = "00:00"
+                audioDuration.innerText = "00:00"
+                event.target.innerHTML = 'Play';
+                event.target.style.backgroundColor = 'rgb(23, 219, 219)';
+            }
+
+            aud.ontimeupdate = function () {
+                if (!aud.paused && aud.currentTime > 0) {
+                    audioTime.innerText = formatTime(aud.currentTime);
+                    audioDuration.innerText = formatTime(aud.duration);
+                }
+            };
+
+        }
+    });
+
+    function formatTime(time) {
+        minutes = Math.floor(time / 60);
+        seconds = Math.floor(time % 60);
+        if (seconds < 10) {
+            seconds = '0' + seconds;
+        }
+        if (minutes < 10) {
+            minutes = '0' + minutes;
+        }
+        return minutes + ':' + seconds;
+    }
+
+</script>
+
+</html>

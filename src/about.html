@@ -6,7 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@500&display=swap" rel="stylesheet">
-    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Domine&family=Maven+Pro:wght@500&family=Righteous&family=Signika+Negative&family=The+Nautigal&display=swap" rel="stylesheet">
+    <title>About us</title>
     <style>
         @font-face {
             font-family: tearfont;
@@ -146,14 +150,14 @@
             color:rgb(79, 194, 171);
         }
         .navitem{
-            margin:20px 35px;
+            margin:20px 22px;
             padding:12px 12px;
-            font-size: 20px;
+            font-size: 18px;
             font-family:'Exo 2', sans-serif;
             /* background-color: black; */
             /* opacity: 0.7; */
         }
-        .navitem:hover,#active{
+        /* .navitem:hover,#active{
             filter:brightness(180%);
             border-bottom:2px solid rgba(233, 169, 97, 0.976); ;
             margin-bottom:18px;
@@ -161,16 +165,19 @@
         } 
         .navitem:hover a,#active a{
             color:rgba(233, 169, 97, 0.976); 
-        }  
+        }   */
         .content {
             text-align: center;
+            color:rgba(253, 248, 248, 0.936);
             margin-top: 100px;
-            font-size: 20px;
+            font-size: 18px;
             padding: 0 50px;
+            font-family: 'Exo 2', sans-serif;
         }
 
         .content>p {
-            font-size: 65px;
+            font-size:140px;
+            color:rgba(227, 212, 212, 0.72);
         }
 
         .creators {
@@ -248,17 +255,19 @@
         <img id="logo" src="backgrounds and logo/dlogo.png" alt="#">
         <img id="title" src="backgrounds and logo/title.png" alt="">
         <ul class="navbar">
-            <li class="navitem"><a href="index.html"> Home</a></li>
-            <li class="navitem" id="active"><a href="abount.html"> About us</a></li>
-            <li class="navitem"><a href="Artists.html"> Artists</a></li>
+            <li class="navitem"><a href="index.html">HOME</a></li>
+            <li class="navitem" id="active"><a href="about.html">ABOUT US</a></li>
+            <li class="navitem"><a href="Artists.html">ARTISTS</a></li>
+            <li class="navitem"><a href="search.html">SEARCH</a></li>
+            <li class="navitem"><a href="spotlight.html">SPOTLIGHT</a></li>
         </ul>
     </div>
     <div class="content">
-        <p style="font-style:italic;">"Discover the sound of your soul"</p>
+        <p style="font-family:'Maven Pro';text-shadow:4px 4px 14px black;" class="typing-text" data-text="Discover the sound of your soul!"></p>
         <br \>
         <div class="about">
-            <p style="text-align:left; margin-left: 70px; font-size: 65px;"><strong>About Dhvani</strong></p>
-            <p style="text-align:left; margin-left: 70px; font-size: 50px;">Dhvani is a platform that allows users to
+            <p style="text-align:left;margin:25px 0px;text-shadow:3px 3px 14px black;margin-left:70px;font-size: 60px;"><strong>About Dhvani</strong></p>
+            <p style="text-align:left; margin-left: 70px; font-size: 42px;">Dhvani is a platform that allows users to
                 review
                 songs by rating
                 them and posting comments. It shows the
@@ -269,7 +278,7 @@
         <br \>
         <br \>
         <div class="about" id="last">
-            <p style="text-align:left; margin-left: 70px; font-size: 65px;"><strong>About the creators</strong></p>
+            <p style="text-align:left;margin-left: 70px;text-shadow:3px 3px 14px black; font-size: 60px;"><strong>About the creators</strong></p>
             <div class="creators">
                 <div class="creator" style="margin-right:200px;">
 
@@ -313,6 +322,36 @@
            <p>&nbsp;&nbsp;All rights reserved.</p>
         </div>
    </div>
+   <script src="typing_effect.js"></script>
 </body>
+<script>
+    let nav = document.querySelectorAll('.navitem');
+
+for(let i=0;i<nav.length;i++){
+   if(nav[i].id == "active"){
+        nav[i].style.borderBottom='2px solid rgba(233, 169, 97, 0.976)'; 
+        nav[i].getElementsByTagName('a')[0].style.color='rgba(233, 169, 97, 0.976)';
+        nav[i].style.marginBottom='18px';
+        nav[i].style.borderRadius='2px';
+        nav[i].style.filter= 'brightness(180%)';
+        continue;
+   }
+   nav[i].addEventListener('mouseover',function(){
+      nav[i].style.borderBottom='2px solid rgba(233, 169, 97, 0.976)'; 
+      nav[i].getElementsByTagName('a')[0].style.color='rgba(233, 169, 97, 0.976)';
+      nav[i].style.marginBottom='18px';
+      nav[i].style.borderRadius='2px';
+      nav[i].style.filter= 'brightness(180%)';
+   })
+   nav[i].addEventListener('mouseout',function(){
+      nav[i].style.borderBottom='None'; 
+      nav[i].getElementsByTagName('a')[0].style.color='rgb(79, 194, 171)';
+      nav[i].style.marginBottom='20px';
+      nav[i].style.borderRadius='0px';
+      nav[i].style.filter= 'brightness(100%)';
+   })
+}
+
+</script>
 
 </html>
