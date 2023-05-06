@@ -136,11 +136,20 @@
             color:rgb(79, 194, 171);
         }
         .navitem{
-            margin:20px 22px;
+            margin:20px 35px;
             padding:12px 12px;
-            font-size: 18px;
+            font-size: 20px;
             font-family:'Exo 2', sans-serif;
         }
+        .navitem:hover,#active{
+            filter:brightness(180%);
+            border-bottom:2px solid rgba(233, 169, 97, 0.976); ;
+            margin-bottom:18px;
+            border-radius: 2px;
+        } 
+        .navitem:hover a,#active a{
+            color:rgba(233, 169, 97, 0.976); 
+        }  
         .contentbox{
           height:2000px;
           background-color:  rgba(7, 4, 9, 0.5);
@@ -264,11 +273,9 @@
         <img id="logo" src="backgrounds and logo/dlogo.png" alt="#">
         <img id="title" src="backgrounds and logo/title.png" alt="">
         <ul class="navbar">
-            <li class="navitem"><a href="index.html">HOME</a></li>
+            <li class="navitem" id="active"><a href="index.html">HOME</a></li>
             <li class="navitem"><a href="about.html">ABOUT US</a></li>
             <li class="navitem"><a href="Artists.html">ARTISTS</a></li>
-            <li class="navitem"><a href="search.html">SEARCH</a></li>
-            <li class="navitem"><a href="spotlight.html">SPOTLIGHT</a></li>
         </ul>
     </div>
     <div class="contentbox">
@@ -338,32 +345,4 @@
         </div>
    </div>
 </body>
-<script>
-    let nav = document.querySelectorAll('.navitem');
-    
-    for(let i=0;i<nav.length;i++){
-       if(nav[i].id == "active"){
-            nav[i].style.borderBottom='2px solid rgba(233, 169, 97, 0.976)'; 
-            nav[i].getElementsByTagName('a')[0].style.color='rgba(233, 169, 97, 0.976)';
-            nav[i].style.marginBottom='18px';
-            nav[i].style.borderRadius='2px';
-            nav[i].style.filter= 'brightness(180%)';
-            continue;
-       }
-       nav[i].addEventListener('mouseover',function(){
-          nav[i].style.borderBottom='2px solid rgba(233, 169, 97, 0.976)'; 
-          nav[i].getElementsByTagName('a')[0].style.color='rgba(233, 169, 97, 0.976)';
-          nav[i].style.marginBottom='18px';
-          nav[i].style.borderRadius='2px';
-          nav[i].style.filter= 'brightness(180%)';
-       })
-       nav[i].addEventListener('mouseout',function(){
-          nav[i].style.borderBottom='None'; 
-          nav[i].getElementsByTagName('a')[0].style.color='rgb(79, 194, 171)';
-          nav[i].style.marginBottom='20px';
-          nav[i].style.borderRadius='0px';
-          nav[i].style.filter= 'brightness(100%)';
-       })
-    }
-    </script>
 </html>

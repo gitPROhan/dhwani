@@ -69,7 +69,7 @@
 
         .navbar {
             position: relative;
-            left: 660px;
+            left: 750px;
             display: flex;
             justify-content: space-between;
             /* align-items: center; */
@@ -86,12 +86,23 @@
         }
 
         .navitem {
-            margin: 20px 22px;
+            margin: 20px 35px;
             padding: 12px 12px;
             font-size: 18px;
             font-family: 'Exo 2', sans-serif;
             /* background-color: black; */
             /* opacity: 0.7; */
+        }
+
+        .navitem:hover {
+            filter: brightness(140%);
+            border-bottom: 2px solid pink;
+            margin-bottom: 18px;
+            border-radius: 2px;
+        }
+
+        .navitem:hover a {
+            color: rgba(228, 177, 129, 0.976);
         }
 
         .page {
@@ -194,23 +205,6 @@
             margin: 16px 7px;
         }
 
-        .playbut {
-            margin-left: 20px;
-            height: 42px;
-            width: 130px;
-            font-size: 16px;
-            border-radius: 10px;
-            color: white;
-            font-family: 'Exo 2', sans-serif;
-            background-color: black;
-            cursor: pointer;
-        }
-
-        .playbut:hover {
-            background-color: rgb(225, 178, 95);
-            color: black;
-        }
-
         .footer {
             display: flex;
             flex-direction: row;
@@ -255,12 +249,9 @@
         <img id="logo" src="backgrounds and logo/dlogo.png" alt="#">
         <img id="title" src="backgrounds and logo/title.png" alt="">
         <ul class="navbar">
-            <li class="navitem"><a href="index.html">HOME</a></li>
-            <li class="navitem"><a href="about.html">ABOUT US</a></li>
-            <li class="navitem"><a href="Artists.html">ARTISTS</a></li>
-            <li class="navitem"><a href="search.html">SEARCH</a></li>
-            <li class="navitem"><a href="spotlight.html">SPOTLIGHT</a></li>
-            <li class="navitem"><a href="playlist.html">PLAYLIST</a></li>
+            <li class="navitem" id="active"><a href="index.html">HOME</a></li>
+            <li class="navitem"><a href="about.html"> ABOUT US</a></li>
+            <li class="navitem"><a href="Artists.html"> ARTISTS</a></li>
         </ul>
     </div>
     <div class="page">
@@ -272,35 +263,35 @@
             <div class="song">
                 <img src="diljit_dosanjh/highend.jpg" alt="">
                 <div class="songtitle">
-                    <p class="songname">High End<button class="playbut">Add to playlist</button></p>
+                    <p class="songname">High End</p>
                     <p class="time">2:56</p>
                 </div>
             </div>
             <div class="song">
                 <img src="diljit_dosanjh/future.jpg" alt="">
                 <div class="songtitle">
-                    <p class="songname">Future<button class="playbut">Add to playlist</button></p>
+                    <p class="songname">Future</p>
                     <p class="time">2:56</p>
                 </div>
             </div>
             <div class="song">
                 <img src="diljit_dosanjh/bigscene.jpeg" alt="">
                 <div class="songtitle">
-                    <p class="songname">Big Scene<button class="playbut">Add to playlist</button></p>
+                    <p class="songname">Big Scene</p>
                     <p class="time">3:27</p>
                 </div>
             </div>
             <div class="song">
                 <img src="diljit_dosanjh/drive.jpg" alt="">
                 <div class="songtitle">
-                    <p class="songname">Drive<button class="playbut">Add to playlist</button></p>
+                    <p class="songname">Drive</p>
                     <p class="time">3:50</p>
                 </div>
             </div>
             <div class="song">
                 <img src="diljit_dosanjh/sorry.jpg" alt="">
                 <div class="songtitle">
-                    <p class="songname">Sorry<button class="playbut">Add to playlist</button></p>
+                    <p class="songname">Sorry</p>
                     <p class="time">2:42</p>
                 </div>
             </div>
@@ -334,33 +325,5 @@
         </div>
     </div>
 </body>
-<script>
-    let nav = document.querySelectorAll('.navitem');
-
-    for (let i = 0; i < nav.length; i++) {
-        if (nav[i].id == "active") {
-            nav[i].style.borderBottom = '2px solid rgba(233, 169, 97, 0.976)';
-            nav[i].getElementsByTagName('a')[0].style.color = 'rgba(233, 169, 97, 0.976)';
-            nav[i].style.marginBottom = '18px';
-            nav[i].style.borderRadius = '2px';
-            nav[i].style.filter = 'brightness(180%)';
-            continue;
-        }
-        nav[i].addEventListener('mouseover', function () {
-            nav[i].style.borderBottom = '2px solid rgba(233, 169, 97, 0.976)';
-            nav[i].getElementsByTagName('a')[0].style.color = 'rgba(233, 169, 97, 0.976)';
-            nav[i].style.marginBottom = '18px';
-            nav[i].style.borderRadius = '2px';
-            nav[i].style.filter = 'brightness(180%)';
-        })
-        nav[i].addEventListener('mouseout', function () {
-            nav[i].style.borderBottom = 'None';
-            nav[i].getElementsByTagName('a')[0].style.color = 'rgb(79, 194, 171)';
-            nav[i].style.marginBottom = '20px';
-            nav[i].style.borderRadius = '0px';
-            nav[i].style.filter = 'brightness(100%)';
-        })
-    }
-</script>
 
 </html>

@@ -8,9 +8,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Domine&family=Righteous&family=Signika+Negative&family=The+Nautigal&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="index.css">
     <title>Document</title>
-    <!-- <style>
+    <style>
         @font-face {
             font-family: tearfont;
             src: url('demon-sker-font/DemonSker-zyzD.ttf');
@@ -53,7 +52,7 @@
             animation-name: starter;  
             animation-duration: 5s;
             animation-iteration-count:infinite;
-            /* animation-fill-mode: forwards;  will stop at the end */
+            /* animation-fill-mode: forwards; ---> will stop at the end */
             animation-timing-function:ease-in-out;  /*  constant speed */
         }
         @keyframes starter{
@@ -88,7 +87,7 @@
             animation-name: starter1;  
             animation-duration: 5s;
             animation-iteration-count:infinite;
-            /* animation-fill-mode: forwards;  will stop at the end */
+            /* animation-fill-mode: forwards; ---> will stop at the end */
             animation-timing-function:ease-in-out;  /*  constant speed */
         }
         @keyframes starter1{
@@ -149,18 +148,31 @@
             color:rgb(79, 194, 171);
         }
         .navitem{
-            margin:20px 22px;
+            margin:20px 35px;
             padding:12px 12px;
-            font-size: 18px;
+            font-size: 20px;
             font-family:'Exo 2', sans-serif;
+            /* background-color: black; */
+            /* opacity: 0.7; */
         }
-        
+        .navitem:hover,#active{
+            filter:brightness(180%);
+            border-bottom:2px solid rgba(233, 169, 97, 0.976); ;
+            margin-bottom:18px;
+            border-radius: 2px;
+        } 
+        .navitem:hover a,#active a{
+            color:rgba(233, 169, 97, 0.976); 
+        }  
         .content{
             display:flex;
             flex-direction:column;
             width:100%;
             margin-bottom:60px;
+            /* flex-wrap: wrap; */
+            /* flex-direction:row; */
             align-items: center;
+            /* justify-content: center; */
         }
         .content .toplist{
             display:flex;
@@ -180,9 +192,7 @@
             color:rgb(230, 192, 133);
             background-color:rgba(30, 29, 29, 0.582);
             box-shadow:4px 4px 20px rgb(6, 222, 242);
-        }
-        .content .toplist .listbox:hover p{
-            color:rgb(230, 192, 133);
+        
         }
         .content .topartist{
             font-size: 30px;
@@ -205,9 +215,9 @@
             border-radius: 6px;
             /* border:3px solid white; */
         }
-        .content .toplist .listbox p{
-            margin-top: 0px;
-        }
+        /* .content .toplist .listbox img::after{
+            
+        }  */
         .content .toplist .listbox:hover img{
             filter:brightness(70%) drop-shadow(4px 4px 16px black) blur(2px);
             
@@ -231,6 +241,7 @@
             transform: rotate(-90deg);
             text-shadow: 4px 4px 15px rgb(213, 13, 227);
             font-size:175px;
+            /* text-orientation:sideways-right; */
         }
         .content .top{
             display:flex;
@@ -269,8 +280,11 @@
             transition-duration: 0.8s;
         }
         .charts:hover img{
+            /* cursor:pointer; */
             transform: rotate(360deg);
             transition-duration: 1s;
+            
+            /* transition-delay: 0.5s; */
         }
         .charts p{
             font-family: tearfont;
@@ -347,23 +361,21 @@
             background-color: white;
             border-radius: 8px;
         }
-    </style> -->
+    </style>
 </head>
 <body>
     <div class="topbox">
         <img id="logo" src="backgrounds and logo/dlogo.png" alt="#">
         <img id="title" src="backgrounds and logo/title.png" alt="">
         <ul class="navbar">
-            <li class="navitem" id="active"><a href="index.html">HOME</a></li>
-            <li class="navitem"><a href="about.html">ABOUT US</a></li>
-            <li class="navitem"><a href="Artists.html">ARTISTS</a></li>
-            <li class="navitem"><a href="search.html">SEARCH</a></li>
-            <li class="navitem"><a href="spotlight.html">SPOTLIGHT</a></li>
+            <li class="navitem" id="active"><a href="index.html"> HOME</a></li>
+            <li class="navitem"><a href="about.html"> ABOUT US</a></li>
+            <li class="navitem"><a href="Artists.html"> ARTISTS</a></li>
         </ul>
     </div>
     <div class="charts">
         <img src="backgrounds and logo/doublearrow.png" alt="">
-        <p class="typing-text" data-text="Top Charts"></p>
+        <p>Top Charts</p>
     </div>
     <div class="content">
         <div class="top" id="top1">
@@ -372,24 +384,21 @@
             <img src="backgrounds and logo/doublearrow.png" alt="">
         </div>
         <div class="toplist" >
-            <div class="listbox" >
-            <a href="#">
-            <img src="jass_manak/badmunda.jpg" alt="#">
+        <a href="#">
+        <div class="listbox" ><img src="jass_manak/badmunda.jpg" alt="#">
             <p>Bad Munda</p>
-            </a>
         </div>
-        <div class="listbox" >
-            <a href="#">
-            <img src="sidhu_moosewala/295.jpg" alt="#">
+         </a>
+         <a href="#">
+        <div class="listbox" ><img src="sidhu_moosewala/295.jpg" alt="#">
             <p>295</p>
-            </a>
         </div> 
-        <div class="listbox" >
-            <a href="#">
-            <img src="honey_singh/desikalakaar.jpeg" alt="#">
+         </a>
+         <a href="#">
+        <div class="listbox" ><img src="honey_singh/desikalakaar.jpeg" alt="#">
             <p>Desi Kalakar</p>
-            </a>
         </div>
+         </a>
         </div>
         </div>
         <div class="top" id="top2">
@@ -398,25 +407,21 @@
             <img src="backgrounds and logo/doublearrow.png" alt="">
         </div>
         <div class="toplist" >
-        
-        <div class="listbox" >
-            <a href="jass_album1.html">
-            <img src="jass_manak/nocompetition.jpeg" alt="#">
+        <a href="jass_album1.html">
+        <div class="listbox" ><img src="jass_manak/nocompetition.jpeg" alt="#">
             <p>No Competition</p>
-            </a>
         </div>
-        <div class="listbox" >
-            <a href="sidhu_album1.html"> 
-            <img src="sidhu_moosewala/Moosetape.jpg" alt="#">
+        </a>
+        <a href="sidhu_album1.html">
+        <div class="listbox" ><img src="sidhu_moosewala/Moosetape.jpg" alt="#">
             <p>Moosetape</p>
-            </a>      
         </div> 
-        <div class="listbox" >
-            <a href="badshah_album1.html">
-            <img src="badshah/onealbum_badshah.jpeg" alt="#">
+        </a>
+        <a href="badshah_album1.html">
+        <div class="listbox" ><img src="badshah/onealbum_badshah.jpeg" alt="#">
             <p>ONE</p>
-            </a>
         </div>
+         </a>
         </div>
         </div>
         <div class="top" id="top3">
@@ -425,24 +430,21 @@
              <img src="backgrounds and logo/doublearrow.png" alt="">
         </div>
         <div class="toplist" >
-         <div class="listbox" >
-            <a href="artist2.html">
-            <img src="artist2 images/sidhu moose wala.jpg" alt="#">
+        <a href="artist2.html">
+        <div class="listbox" ><img src="artist2 images/sidhu moose wala.jpg" alt="#">
             <p>Sidhu Moose Wala</p>
-            </a>
         </div>
-        <div class="listbox" >
-            <a href="artist4.html">
-            <img src="artist4_images/honey singh.jpg" alt="#">
+        </a>
+        <a href="artist4.html">
+        <div class="listbox" ><img src="artist4_images/honey singh.jpg" alt="#">
             <p>Honey Singh</p>
-            </a>
         </div> 
-        <div class="listbox" >
-            <a href="artist1.html">
-            <img src="artist1 images/badshah.jpg" alt="#">
+        </a>
+        <a href="artist1.html">
+        <div class="listbox" ><img src="artist1 images/badshah.jpg" alt="#">
             <p>Badshah</p>
-            </a>
         </div>
+        </a>
         </div>
         </div>
     </div>
@@ -473,7 +475,5 @@
            <p>&nbsp;&nbsp;All rights reserved.</p>
         </div>
    </div>
-   <script src="typing_effect.js"></script>
 </body>
-<script src="index.js"></script>
 </html>
